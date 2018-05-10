@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Create New Request</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- enqueue fonts and styles -->
+	<link href="https://fonts.googleapis.com/css?family=Poppins:300,400,600" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="assets/css/main.css">
+	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.0/normalize.css">
+</head>
+<body>
+	<form class="container">
+		<nav><a href="index.html">Home</a> | <a href="user.html">User Dashboard</a> | <a href="user-requests.html">Admin Dashboard</a></nav>
+		<h2>Create New Maintenance Request</h2>
+		<fieldset>
+			<input type="text" name="name" placeholder="Your Name" required>
+			<input type="text" name="dept" placeholder="Your Department" required>
+			<input type="text" name="request-title" placeholder="Request Title" required>
+			<textarea name="request" placeholder="Details of the request ..."></textarea>
+			<input type="submit"name="submit" value="Submit New Request">
+			<div class="after-form">
+    			<p><a href="user.html">See all your requests</a></p>
+			</div>
+		</fieldset>
+	</form>
+</body>
+</html>
