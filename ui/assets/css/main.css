@@ -1,0 +1,73 @@
+body {
+	color: #333;
+	font-family: 'Poppins', Helvetica, sans-serif;
+}
+
+/* Homepage */
+
+.home {
+	background: linear-gradient(to top, #000000, #434343);;
+	height: 100vh;
+	text-align: center;
+}
+
+.home h1 {
+	font-size: 42px;
+	font-weight: 300;
+	margin: 30px auto;
+}
+
+.home .welcome {
+	color: #fff;
+	height: 40vh;
+	margin: auto;
+	max-width: 600px;
+	padding: 30vh 50px;
+}
+
+@media screen and (max-width: 600px) {
+  .home h1 {
+  	font-size: 32px;
+  }
+
+  .home .welcome {
+  	padding: 30vh 30px;
+  }
+}
+
+/* Typography */
+
+a {
+	text-decoration: none;
+}
+
+/* Buttons */
+
+a.button {
+	background: #fff;
+	border: none;
+	border-radius: 4px;
+	color: #333;
+	display: inline-block;
+	font-size: 14px;
+	padding: 12px 15px;
+	text-transform: lowercase;
+}
+
+a.button:hover {
+	background: rgba(255, 255, 255, 0.35);
+	color: #fff;
+	cursor: pointer;
+}
+
+a.button.alt {
+	background: transparent;
+	border: 1px solid #fff;
+	color: #fff;
+	padding: 10px 13px;
+}
+
+a.button.alt:hover {
+	background: #fff;
+	color: #333;
+}
