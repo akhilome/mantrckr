@@ -163,6 +163,20 @@ li.single-request p {
 	font-size: 14px;
 }
 
+a.card {
+	text-decoration: none;
+}
+
+a.card li:hover {
+    background: #333;
+    color: #fff;
+}
+
+a.card:focus,
+a.card:visited {
+	outline: none;
+}
+
 .status-a::after {
   content: "done";
 }
