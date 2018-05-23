@@ -1,6 +1,6 @@
 export const users = [];
 
-export const userRequests = [
+const userRequests = [
   {
     requestId: 1,
     requestTitle: 'Faulty counting machine',
@@ -20,3 +20,5 @@ export const userRequests = [
     status: 'rejected',
   },
 ];
+
+export default userRequests;
