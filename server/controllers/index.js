@@ -24,11 +24,11 @@ class RequestController {
     const { requestTitle, requestDetails } = req.body;
     if (!requestTitle || !requestDetails) return res.status(400).json({ message: 'Please fill out all fields' });
     const requestId = userRequests.length + 1;
-    const newRquest = new Request(requestId, requestTitle, requestDetails);
+    const newRequest = new Request(requestId, requestTitle, requestDetails);
 
-    userRequests.push(newRquest);
+    userRequests.push(newRequest);
 
-    return res.status(201).json({ newRquest });
+    return res.status(201).json({ newRequest });
   }
 
   static modifyRequest(req, res) {
