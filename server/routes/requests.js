@@ -1,5 +1,6 @@
 import express from 'express';
 import userRequests from '../data/index';
+import Request from '../models/request';
 
 const router = express.Router();
 
@@ -21,6 +22,19 @@ router.get('/requests/:requestId', (req, res) => {
     return res.status(404).json({ message: 'No request with that Id exists' });
   }
   return res.status(200).json({ result });
+});
+
+// Create a new request
+router.post('/requests', (req, res) => {
+  const { requestTitle, requestDetails } = req.body;
+  // Check if all fields are filled
+  if (!requestTitle || !requestDetails) return res.status(400).json({ message: 'Please fill out all fields' });
+  const requestId = userRequests.length + 1;
+  const newRquest = new Request(requestId, requestTitle, requestDetails);
+
+  userRequests.push(newRquest);
+
+  return res.status(201).json({ newRquest });
 });
 
 export default router;
