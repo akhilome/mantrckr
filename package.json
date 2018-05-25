@@ -4,9 +4,10 @@
   "description": "Maintenance Tracker App",
   "main": "server.js",
   "scripts": {
-    "test": "nyc mocha --require babel-register --exit",
+    "test": "nyc --reporter=html --reporter=text mocha --require babel-register --exit",
     "start": "nodemon server.js --exec babel-node --presets es2015,stage-2",
-    "coverage": "nyc report --reporter=text-lcov | coveralls"
+    "coverage": "nyc report --reporter=text-lcov | coveralls",
+    "coveralls": "npm run test && nyc report --reporter=text-lcov | coveralls"
   },
   "repository": {
     "type": "git",
