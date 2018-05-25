@@ -6,6 +6,20 @@ import userRequests from '../server/data/index';
 chai.use(chaiHttp);
 chai.should();
 
+describe('GET /', () => {
+  it('should welcome the user to the API', (done) => {
+    chai.request(app)
+      .get('/')
+      .end((err, res) => {
+        res.should.have.status(200);
+        res.body.should.be.an('object');
+        res.body.should.have.property('message');
+        res.body.message.should.equal('Welcome to the mantrckr API. Version 1 is live at /api/v1/');
+        done();
+      });
+  });
+});
+
 describe('Get default route', () => {
   it('get default route with 200 OK status code', (done) => {
     chai.request(app)
