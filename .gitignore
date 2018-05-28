@@ -2,3 +2,4 @@
 node_modules/
 # Ignore Coverage data
 coverage
+.nyc_output/
