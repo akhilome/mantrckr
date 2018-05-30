@@ -58,7 +58,7 @@ npm test
 
 ## Deployment
 
-You can see how the UI looks by visiting [Github Page](https://akhilome.github.io/mantrckr) or access the API on [Heroku](mantrck.herokuapp.com).
+You can see how the UI looks by visiting [Github Page](https://akhilome.github.io/mantrckr) or access the API on [Heroku](https://mantrckr.herokuapp.com/).
 
 ## Built With
 
